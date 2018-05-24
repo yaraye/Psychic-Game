@@ -1,0 +1,36 @@
+body{
+    background-image: url("assets/images/image.jpn");
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-content: space-around;
+}
+h1{
+   font-size: 30px;
+    
+}
+
+h2{ 
+    font-size: 18px;
+
+}
+#win,
+#losses,
+#guessesLeft,
+#yourGuessSoFar{
+    font-size: 30px;
+}
+
+#win {
+    color: Green;
+    
+}
+#losses{
+    color: black;
+}
+
+#guessesLeft {
+    color:red;
+    
+}
+#yourGuessSoFar{
+    color: blue;
+}

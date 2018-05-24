@@ -35,9 +35,9 @@ alert("try again, you guessed incorrectly");
 }
 
 if (guessesLeft==0){
-loses= losses+1;
+losses= losses+1;
 guessesLeft=9;
-yourGuessSoFar="";
+yourGuessSoFar=" ";
 alert ("you lost, you're not psychic!");
 }
 var guesses = document.getElementById("yourGuessSoFar");
@@ -47,7 +47,7 @@ var win = document.getElementById("wins");
 wins.innerHTML =  wins;
 
 var loss = document.getElementById("losses");
-loss.innerHTML =  losses;
+losses.innerHTML =  losses;
 var guessLeft = document.getElementById("guessesLeft");
 guessLeft.innerHTML = guessesLeft;
 }
