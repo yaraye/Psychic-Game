@@ -9,49 +9,52 @@ var guessesLeft=9;
 var yourGuessSoFar="";
 
 //when a key pressed . function will run
-document.onkeypress = function (event) {
-
 //user guessed letter
-var userGuess= event.key;
-console.log (userGuess);
-
 //computer guessed result
-var computerChoice =alphabte[Math.floor(Math.random ()*alphabte.length)];
-console.log(computerChoice);
-
-yourGuessSoFar = yourGuessSoFar + " " + userGuess;
-
 //if correct guess say winner and increase win board
 // if wrong increase loss board;
 
-if((userGuess)=== (computerChoice)){
-yourGuessSoFar="";
-guessesLeft = 9;
-wins++;
-alert ("winner");
+document.onkeypress = function (event) {
+
+    var computerChoice =alphabte[Math.floor(Math.random ()*alphabte.length)];
+    console.log(computerChoice);
+
+    var userGuess= event.key;
+    console.log (userGuess);
+
+yourGuessSoFar = yourGuessSoFar + " " + userGuess;
+
+if((userGuess)=== (computerChoice))
+{
+    yourGuessSoFar="";
+    guessesLeft = 9;
+    wins++;
+    alert ("winner");
 
 }else {
-guessesLeft--;
-alert("try again, you guessed incorrectly");
+    guessesLeft--;
+    alert("Try again, you guessed incorrectly");
 }
 
-if (guessesLeft===0){
-guessesLeft=9;
-yourGuessSoFar=" ";
-losses = losses+1;
-alert ("you lost, you're not psychic!");
+if (guessesLeft==0){
+    guessesLeft=9;
+    yourGuessSoFar=" ";
+    losses++;
+    alert ("you lost, you're not psychic!");
 }
 
 var win = document.getElementById("wins");
-wins.innerHTML =  wins;
+win.innerHTML =  wins;
 
 var loss = document.getElementById("losses");
-losses.innerHTML =  losses;
+loss.innerHTML =  losses;
 
-var guessLeft = document.getElementById("guessesLeft");
-guessLeft.innerHTML = guessesLeft;
 
-var guesses = document.getElementById("yourGuessSoFar");
-guesses.innerHTML =  yourGuessSoFar;
+
+var guess = document.getElementById("guessesLeft");
+guess.innerHTML = guessesLeft;
+
+var choice = document.getElementById("yourGuessSoFar");
+choice.innerHTML =  yourGuessSoFar;
 }
 

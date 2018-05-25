@@ -1,36 +1,17 @@
 body{
-    background-image: url("assets/images/image.jpn");
-    font-family: Georgia, 'Times New Roman', Times, serif;
+   background-image: url("../images/Background_Calm_River.jpg");
+    font-family: 'Lobster', cursive;
     align-content: space-around;
-}
-h1{
-   font-size: 30px;
+    float: right;
+    padding-top: 90px;
     
 }
-
-h2{ 
-    font-size: 18px;
-
-}
-#win,
+#wins,
 #losses,
 #guessesLeft,
-#yourGuessSoFar{
-    font-size: 30px;
-}
+#yourGuessSoFar
+ {
+    font-size: 24px;
+    color:white;
 
-#win {
-    color: Green;
-    
-}
-#losses{
-    color: black;
-}
-
-#guessesLeft {
-    color:red;
-    
-}
-#yourGuessSoFar{
-    color: blue;
 }
