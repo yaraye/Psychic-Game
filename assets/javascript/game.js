@@ -17,13 +17,30 @@ var yourGuessSoFar="";
 document.onkeypress = function (event) {
 
     var computerChoice =alphabte[Math.floor(Math.random ()*alphabte.length)];
-    console.log(computerChoice);
+   // console.log(computerChoice);
 
     var userGuess= event.key;
-    console.log (userGuess);
+    //console.log (userGuess);
 
 yourGuessSoFar = yourGuessSoFar + " " + userGuess;
+//checkRepeat: 
+ function checkRepeat(){
+    var repeatCounter = -1;
 
+    //Loop for the number of guesses previously made amount of times.
+    //If the current letter equals one from the array of allGuesses, the counter variable counts up one.
+    for (var i=0; i < this.yourGuessSoFar.length; i++){
+        if (this.alphabte == this.yourGuessSoFar[i]){
+            repeatCounter++;
+        }
+    }
+		if (repeatCounter == 0){
+			this.isRepeat = false;
+		}
+		else{
+			this.isRepeat = true;
+		}
+	}
 if((userGuess)=== (computerChoice))
 {
     yourGuessSoFar="";
@@ -33,7 +50,7 @@ if((userGuess)=== (computerChoice))
 
 }else {
     guessesLeft--;
-    alert("Try again, you guessed incorrectly");
+    //alert("Try again, you guessed incorrectly");
 }
 
 if (guessesLeft==0){
